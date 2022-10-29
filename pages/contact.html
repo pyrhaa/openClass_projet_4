@@ -12,6 +12,22 @@
     <title>La Panthère – Agence de Web Design</title>
 
     <link rel="shortcut icon" type="image/png" href="../img/favicon.jpg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon/favicon-16x16.png" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+    <meta name="theme-color" content="#ffffff" />
 
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="../style.css" />
@@ -21,11 +37,6 @@
     <link
       rel="canonical"
       href="https://pyrhaa.github.io/openClass_projet_4/index.html" />
-    <script src="../js/jquery-2.1.0.js"></script>
-    <script src="../js/bootstrap.js"></script>
-    <script src="../js/blocs.js"></script>
-    <script src="../js/jquery.touchSwipe.js" defer></script>
-    <script src="../js/gmaps.js"></script>
 
     <!-- Analytics -->
     <script
@@ -45,26 +56,26 @@
   <body>
     <!-- Principal conteneur -->
     <div class="page-container">
-      <!-- bloc-0 -->
-      <div class="bloc bgc-white l-bloc" id="bloc-0">
+      <!-- Header -->
+      <header class="bloc bgc-white l-bloc" id="bloc-0">
         <div class="container bloc-sm">
-          <nav class="navbar row">
+          <nav aria-label="La panthere Main Navigation" class="navbar row">
             <div class="navbar-header">
-              <a class="navbar-brand" href="../index.html"
-                ><img
+              <a class="navbar-brand" href="../index.html">
+                <img
                   src="../img/agence-la-panthere-monochrome.svg"
-                  alt="agence la panthère logo"
-                  height="40"
-              /></a>
+                  alt="Agence la Panthère - meilleure agence de web design à Lyon"
+                  height="40" />
+              </a>
               <button
-                id="nav-toggle"
                 type="button"
                 class="ui-navbar-toggle navbar-toggle"
                 data-toggle="collapse"
                 data-target=".navbar-1">
-                <span class="sr-only">Toggle navigation</span
-                ><span class="icon-bar"></span><span class="icon-bar"></span
-                ><span class="icon-bar"></span>
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
               </button>
             </div>
             <div class="collapse navbar-collapse navbar-1 special-dropdown-nav">
@@ -72,149 +83,176 @@
                 <li>
                   <a href="../index.html">Accueil</a>
                 </li>
-                <li></li>
                 <li>
-                  <a href="contact.html">page2 &gt;</a>
+                  <a href="contact.html" aria-current="page">Contact</a>
                 </li>
               </ul>
             </div>
           </nav>
         </div>
-      </div>
-      <!-- bloc-0 END -->
+      </header>
+      <!-- Header END -->
 
-      <!-- bloc-6 -->
-      <div
-        class="bloc bg-dots-bg bg-repeat bgc-atomic-tangerine d-bloc bloc-bg-texture texture-paper"
-        id="bloc-6">
-        <div class="container bloc-lg">
-          <div class="row">
-            <div class="col-sm-12">
-              <h1 class="text-center hero-bloc-text tc-white">
-                Parlons web design !
-              </h1>
-              <p class="text-center mg-lg tc-white tight-width-whitespace">
-                Nous sommes ravis que vous souhaitiez collaborer avec notre
-                agence.<br />
-                Parlez-nous de votre projet en complétant le formulaire
-                ci-dessous.
-              </p>
+      <!-- Main -->
+      <main>
+        <!-- Section cta -->
+        <section
+          aria-label="call-to-action"
+          class="bloc bg-dots-bg bg-repeat bgc-atomic-tangerine d-bloc bloc-bg-texture texture-paper"
+          id="bloc-6">
+          <div class="container bloc-lg">
+            <div class="row">
+              <div class="col-sm-12">
+                <h1 class="text-center hero-bloc-text tc-white">
+                  Parlons web design !
+                </h1>
+                <p class="text-center mg-lg tc-white tight-width-whitespace">
+                  Nous sommes ravis que vous souhaitiez collaborer avec notre
+                  agence.<br />
+                  Parlez-nous de votre projet en complétant le formulaire
+                  ci-dessous.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- bloc-6 END -->
+        </section>
+        <!-- Section cta END -->
 
-      <!-- bloc-7 -->
-      <div class="bloc bgc-white l-bloc" id="bloc-7">
-        <div class="container bloc-lg">
-          <div class="row flex-center">
-            <form action="php.com" method="post" id="form_1">
-              <div class="form-group">
-                <label for="name">Nom, Prénom :</label>
-                <input
-                  id="name"
-                  class="form-control"
-                  type="text"
-                  placeholder="Martin Jean"
-                  autocomplete="name"
-                  required />
-              </div>
-              <div class="form-group">
-                <label for="email">Adresse mail :</label>
-                <input
-                  id="email"
-                  class="form-control"
-                  type="email"
-                  placeholder="exemple@outlook.fr"
-                  autocomplete="email"
-                  required />
-              </div>
-              <div class="form-group">
-                <label for="info">Comment nous avez-vous connu ?</label>
-                <input
-                  class="form-control"
-                  id="info"
-                  type="text"
-                  placeholder="Réseau, TV,..."
-                  required />
-              </div>
-              <div class="form-group">
-                <label for="message">Description de votre projet :</label>
-                <textarea
-                  id="message"
-                  class="form-control"
-                  rows="4"
-                  cols="50"
-                  placeholder="Refonte d'un site web, Création d'un site vitrine,..."
-                  required></textarea>
-              </div>
-              <button
-                class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine"
-                type="submit">
-                Envoyer
-              </button>
-            </form>
-            <div class="text-center">
-              <p>contact@agencelapanthere.com</p>
-              <p>2 place Sathonay 69001 Lyon</p>
-              <p>Ouvert de 9h à 18h, du lundi au vendredi</p>
+        <!-- Section formulaire/adresse -->
+        <section
+          aria-label="formulaire et adresse"
+          class="bloc bgc-white l-bloc"
+          id="bloc-7">
+          <div class="container bloc-lg">
+            <div class="row flex-center">
+              <form
+                aria-label="Envoyez nous la description votre projet"
+                action="php.com"
+                method="post"
+                id="form_1">
+                <div class="form-group">
+                  <label for="name">Nom, Prénom :</label>
+                  <input
+                    id="name"
+                    class="form-control"
+                    type="text"
+                    placeholder="Martin Jean"
+                    autocomplete="name"
+                    required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Adresse mail :</label>
+                  <input
+                    id="email"
+                    class="form-control"
+                    type="email"
+                    placeholder="exemple@outlook.fr"
+                    autocomplete="email"
+                    required />
+                </div>
+                <div class="form-group">
+                  <label for="info">Comment nous avez-vous connu ?</label>
+                  <input
+                    class="form-control"
+                    id="info"
+                    type="text"
+                    placeholder="Réseau, TV,..."
+                    required />
+                </div>
+                <div class="form-group">
+                  <label for="message">Description de votre projet :</label>
+                  <textarea
+                    id="message"
+                    class="form-control"
+                    rows="4"
+                    cols="50"
+                    placeholder="Refonte d'un site web, Création d'un site vitrine,..."
+                    required></textarea>
+                </div>
+                <button
+                  class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine"
+                  type="submit">
+                  Envoyer
+                </button>
+              </form>
+              <address class="text-center">
+                <a href="mailto:contact@agencelapanthere.com"
+                  >contact@agencelapanthere.com</a
+                >
+                2 place Sathonay 69001 Lyon <br />
+                Ouvert de 9h à 18h, du lundi au vendredi
+              </address>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- bloc-7 END -->
-
-      <!-- ScrollToTop Button -->
-      <a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"
-        ><span class="fa fa-chevron-up"></span
-      ></a>
-      <!-- ScrollToTop Button END-->
-
-      <!-- Footer - bloc-8 -->
-      <div class="bloc bgc-atomic-tangerine d-bloc" id="bloc-8">
+        </section>
+        <!-- Section formulaire END -->
+      </main>
+      <!-- Footer -->
+      <footer
+        aria-label="Footer"
+        class="bloc bgc-atomic-tangerine d-bloc"
+        id="bloc-8">
         <div class="container bloc-sm">
           <div class="row">
             <div class="col-sm-12">
-              <p class="text-center white">
-                Agence La Panthère - Agence web basée à Lyon.<br />
-              </p>
               <div class="row row-no-gutters social">
-                <div class="col-sm-3">
-                  <div class="text-center">
-                    <a class="social" href="index.html"
-                      ><span class="fa fa-twitter icon-md"></span
-                    ></a>
-                  </div>
+                <div class="text-center">
+                  <a
+                    aria-label="Twitter"
+                    class="social"
+                    href="https://twitter.com/?lang=fr">
+                    <span class="fa fa-twitter icon-md"></span>
+                  </a>
                 </div>
-                <div class="col-sm-3">
-                  <div class="text-center">
-                    <a class="social" href="index.html"
-                      ><span class="fa fa-facebook icon-md"></span
-                    ></a>
-                  </div>
+
+                <div class="text-center">
+                  <a
+                    aria-label="Facebook"
+                    class="social"
+                    href="https://fr-fr.facebook.com/">
+                    <span class="fa fa-facebook icon-md"></span>
+                  </a>
                 </div>
-                <div class="col-sm-3">
-                  <div class="text-center">
-                    <a class="social" href="index.html"
-                      ><span class="fa fa-dribbble icon-md"></span
-                    ></a>
-                  </div>
+
+                <div class="text-center">
+                  <a
+                    aria-label="Dribble"
+                    class="social"
+                    href="https://dribbble.com/">
+                    <span class="fa fa-dribbble icon-md"></span>
+                  </a>
                 </div>
-                <div class="col-sm-3">
-                  <div class="text-center">
-                    <a class="social" href="index.html"
-                      ><span class="fa fa-instagram icon-md"></span
-                    ></a>
-                  </div>
+
+                <div class="text-center">
+                  <a
+                    aria-label="Instagram"
+                    class="social"
+                    href="https://www.instagram.com/?hl=fr">
+                    <span class="fa fa-instagram icon-md"></span>
+                  </a>
                 </div>
+                <!-- ScrollToTop Button -->
+                <button
+                  aria-label="Haut de page"
+                  type="button"
+                  rel="nofollow"
+                  class="bloc-button btn btn-d scrollToTop"
+                  onclick="scrollToTarget('1')">
+                  <span class="fa fa-chevron-up"></span>
+                </button>
+                <!-- ScrollToTop Button END-->
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- Footer - bloc-8 END -->
+      </footer>
+      <!-- Footer END -->
     </div>
     <!-- Principal conteneur END -->
+    <script src="../js/jquery-2.1.0.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/blocs.js"></script>
+    <script src="../js/jquery.touchSwipe.js" defer></script>
+    <script src="../js/gmaps.js"></script>
   </body>
 </html>
